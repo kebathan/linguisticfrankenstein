@@ -1,7 +1,7 @@
 [project]
 name = "linguisticfrankenstein"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sr. Research Computer Science Project"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
