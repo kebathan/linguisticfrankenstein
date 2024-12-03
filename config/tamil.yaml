@@ -1,0 +1,12 @@
+src_vocab: inputs.txt
+tgt_vocab: target.txt
+train_steps: 15000
+valid_steps: 1000
+save_checkpoint_steps: 2000
+encoder_type: rnn
+decoder_type: rnn
+rnn_size: 512
+batch_size: 64
+beam_size: 5
+learning_rate: 0.001
+dropout: 0.3
