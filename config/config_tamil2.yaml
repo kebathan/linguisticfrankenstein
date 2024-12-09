@@ -9,7 +9,7 @@ data:
 src_vocab: "data/spm.vocab"
 tgt_vocab: "data/spm.vocab"
 
-save_model: "models/tamil2"
+save_model: "/models/tamil2"
 
 train_steps: 15000
 valid_steps: 1000
