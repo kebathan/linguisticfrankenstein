@@ -9,7 +9,17 @@ data:
     path_src: "data/valid_inputs.txt"
     path_tgt: "data/valid_targets.txt"
 
-save_data: "data/processed_tamil"
-
+# vocabulary
 src_vocab: "data/processed_tamil.vocab.src"
 tgt_vocab: "data/processed_tamil.vocab.tgt"
+
+# save model
+save_model: "models/tamil"
+
+# training settings
+train_steps: 15000
+valid_steps: 500
+save_checkpoint_steps: 500
+batch_size: 16
+learning_rate: 0.001
+dropout: 0.3
