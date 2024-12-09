@@ -1,0 +1,15 @@
+# config_tamil
+
+# data
+data:
+  corpus_1:
+    path_src: "data/train_inputs.txt"
+    path_tgt: "data/train_targets.txt"
+  valid:
+    path_src: "data/valid_inputs.txt"
+    path_tgt: "data/valid_targets.txt"
+
+save_data: "data/processed_tamil"
+
+src_vocab: "data/processed_tamil.vocab.src"
+tgt_vocab: "data/processed_tamil.vocab.tgt"
