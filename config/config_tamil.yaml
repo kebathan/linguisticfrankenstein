@@ -1,6 +1,3 @@
-# config_tamil
-
-# data
 data:
   corpus_1:
     path_src: "data/train_inputs.txt"
@@ -9,17 +6,13 @@ data:
     path_src: "data/valid_inputs.txt"
     path_tgt: "data/valid_targets.txt"
 
-# vocabulary
-src_vocab: "data/processed_tamil.vocab.src"
-tgt_vocab: "data/processed_tamil.vocab.tgt"
+src_vocab: "data/vocabulary.txt"
+tgt_vocab: "data/vocabulary.txt"
 
-# save model
 save_model: "models/tamil"
 
-# training settings
-train_steps: 15000
+train_steps: 5000
 valid_steps: 500
 save_checkpoint_steps: 500
-batch_size: 16
-learning_rate: 0.001
-dropout: 0.03
+batch_size: 64
+report_every: 100

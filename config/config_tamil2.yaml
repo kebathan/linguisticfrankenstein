@@ -1,21 +1,18 @@
 data:
   corpus_1:
-    path_src: "data/train_inputs_spm.txt"
-    path_tgt: "data/train_targets_spm.txt"
+    path_src: "data/train_inputs2.txt"
+    path_tgt: "data/train_targets2.txt"
   valid:
-    path_src: "data/valid_inputs_spm.txt"
-    path_tgt: "data/valid_targets_spm.txt"
+    path_src: "data/valid_inputs2.txt"
+    path_tgt: "data/valid_targets2.txt"
 
-src_vocab: "data/spm.vocab"
-tgt_vocab: "data/spm.vocab"
+src_vocab: "data/vocabulary.txt"
+tgt_vocab: "data/vocabulary.txt"
 
-save_model: "/models/tamil2"
+save_model: "models/tamil2"
 
-train_steps: 15000
-valid_steps: 1000
-save_checkpoint_steps: 1000
+train_steps: 5000
+valid_steps: 500
+save_checkpoint_steps: 100
 batch_size: 64
 report_every: 100
-
-world_size: 1
-gpu_ranks: [0]
