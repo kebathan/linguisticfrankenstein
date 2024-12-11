@@ -11,8 +11,8 @@ tgt_vocab: "data/trial2/vocabulary.txt"
 
 save_model: "models/trial2/tamil3"
 
-train_steps: 5000
-valid_steps: 500
+train_steps: 500
+valid_steps: 100
 save_checkpoint_steps: 500
 batch_size: 64
 report_every: 100
