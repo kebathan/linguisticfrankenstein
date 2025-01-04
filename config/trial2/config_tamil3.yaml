@@ -13,6 +13,12 @@ save_model: "models/trial2/tamil3"
 
 train_steps: 500
 valid_steps: 100
-save_checkpoint_steps: 500
+save_checkpoint_steps: 100
 batch_size: 64
 report_every: 100
+
+model_task: seq2seq
+model_type: text
+
+copy_attn: false
+global_attention: general
