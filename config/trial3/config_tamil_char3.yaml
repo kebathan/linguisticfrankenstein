@@ -1,0 +1,53 @@
+data:
+  corpus_1:
+    path_src: "data/trial3/train_inputs_char_test.txt"
+    path_tgt: "data/trial3/train_targets_char_test.txt"
+    weight: 1
+  valid:
+    path_src: "data/trial3/valid_inputs_char.txt"
+    path_tgt: "data/trial3/valid_targets_char.txt"
+
+src_vocab: "data/trial3/vocabulary.vocab.src.fixed.txt"
+tgt_vocab: "data/trial3/vocabulary.vocab.tgt.fixed.txt"
+
+src_specials: ["<unk>", "<s>", "</s>"]
+tgt_specials: ["<unk>", "<s>", "</s>"]
+
+vocab_file_endings: utf-8
+
+save_model: "models/trial3/char_test"
+encoder_type: "transformer"
+decoder_type: "transformer"
+src_word_vec_size: 128
+tgt_word_vec_size: 128
+hidden_size: 128
+transformer_ff: 512
+transformer_heads: 4
+
+layers: 6
+position_encoding: true
+optim: "adam"
+adam_beta1: 0.9
+adam_beta2: 0.998
+learning_rate: 0.01
+warmup_steps: 400
+max_grad_norm: 1.0
+
+dropout: 0.4
+label_smoothing: 0.1
+
+train_steps: 10000
+valid_steps: 500
+batch_size: 32
+batch_type: "tokens"
+accum_count: 2
+
+beam_size: 3
+length_penalty: wu
+
+world_size: 1
+gpu_ranks: [0]
+
+log_file: "data/trial3/training3.log"
+log_file_level: DEBUG
+save_checkpoint_steps: 1000
