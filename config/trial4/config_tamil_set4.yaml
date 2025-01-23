@@ -1,0 +1,56 @@
+data:
+  corpus_1:
+    path_src: "data/trial4/train_inputs.txt"
+    path_tgt: "data/trial4/train_targets.txt"
+  valid:
+    path_src: "data/trial4/valid_inputs.txt"
+    path_tgt: "data/trial4/valid_targets.txt"
+
+src_vocab: "data/trial4/vocab_src_clean.txt"
+tgt_vocab: "data/trial4/vocab_tgt_clean.txt"
+
+src_specials: ["<unk>", "<s>", "</s>"]
+tgt_specials: ["<unk>", "<s>", "</s>"]
+
+vocab_fie_endings: utf-8
+
+save_model: "models/trial4/set4"
+encoder_type: "transformer"
+decoder_type: "transformer"
+src_word_vec_size: 256
+tgt_word_vec_size: 256
+hidden_size: 256
+transformer_ff: 1024
+transformer_heads: 8
+
+layers: 8
+position_encoding: true
+optim: "adafactor"
+adam_beta1: 0.9
+adam_beta2: 0.998
+learning_rate: 0.005
+warmup_steps: 400
+max_grad_norm: 1.0
+decay_method: none
+
+dropout: 0.5
+label_smoothing: 0.1
+
+train_steps: 10000
+valid_steps: 100
+batch_size: 32
+batch_type: "sents"
+accum_count: 4
+
+beam_size: 3
+length_penalty: avg
+
+early_stopping: 5
+early_stopping_criteria: accuracy
+
+world_size: 1
+gpu_ranks: [0]
+
+log_file: "data/trial4/training4.log"
+log_file_level: DEBUG
+save_checkpoint_steps: 1000
